@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* 배경을 검은색으로 설정 */
+    margin: 0;
+}
+
+#game {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: black; /* 게임 배경을 검은색으로 설정 */
+    border: 1px solid #000;
+}
+
+.paddle {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+}
+
+#paddle1 {
+    left: 0;
+    background-color: red; /* 왼쪽 패들을 빨간색으로 설정 */
+}
+
+#paddle2 {
+    right: 0;
+    background-color: blue; /* 오른쪽 패들을 파란색으로 설정 */
+}
+
+#ball {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: gray; /* 공의 기본 색상 */
+    border-radius: 50%;
+}
+
+.boundary {
+    position: absolute;
+    width: 10px;
+    height: 400px; /* 게임 화면 높이에 맞춤 */
+    background-color: rgba(255, 255, 255, 0); /* 투명하게 설정 */
+}
+
+#leftBoundary {
+    left: 0;
+}
+
+#rightBoundary {
+    right: 0;
+}
+
+/* 중앙 점선 추가 */
+#centerLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white; /* 점선을 흰색으로 설정 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+}
+
+/* 점수판 스타일 */
+.score {
+    position: absolute;
+    color: white; /* 점수 색상 흰색 */
+    font-size: 24px; /* 점수 크기 */
+}
+
+#player1-score {
+    left: 10px; /* 왼쪽 점수 위치 */
+    top: 10px; /* 상단 위치 */
+}
+
+#player2-score {
+    right: 10px; /* 오른쪽 점수 위치 */
+    top: 10px; /* 상단 위치 */
+}
